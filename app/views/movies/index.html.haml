@@ -4,9 +4,9 @@
 %table#movies
   %thead
     %tr
-      %th{class:(@th_class if params[:ord]== 'title')}= link_to "Movie Title" , movies_path(:ord => 'title')
+      %th{class:(@th_class if params[:ord]== 'title')}= link_to "Movie Title" , movies_path(:ord => 'title'), :id => "title_header"
       %th Rating
-      %th{class:(@th_class if params[:ord]== 'release_date')}= link_to "Release Date", movies_path(:ord => 'release_date')
+      %th{class:(@th_class if params[:ord]== 'release_date')}= link_to "Release Date", movies_path(:ord => 'release_date'), :id => "release_date_header"
       %th More Info
   %tbody
     - @movies.each do |movie|

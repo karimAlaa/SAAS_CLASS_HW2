@@ -9,19 +9,17 @@ class MoviesController < ApplicationController
   def index
 	@all_ratings = Movie.select(:rating).map(&:rating).uniq
 
-	if params[:ratings]
-		@selected_ratings=params[:ratings].keys
+	session[:ratings]=params[:ratings] if params[:ratings]
+	session[:order]=params[:ord] if params[:ord]
+
+	if session[:ratings]
+		@selected_ratings=session[:ratings].keys
 	else
 		@selected_ratings= @all_ratings
 	end
 
-	#Movie.where(:rating => params[:ratings].keys).order(:title).each do |rat|
-	#Movie.select(:rating).map(&:rating).uniq.each do |rat|
-		#logger.debug(rat)
-	#end	
-		
-	if params[:ord]
-		@movies= Movie.where(:rating => @selected_ratings).order(params[:ord])
+	if session[:order]
+		@movies= Movie.where(:rating => @selected_ratings).order(session[:order])
 		@th_class='hilite'
 	else
     		@movies = Movie.where(:rating => @selected_ratings).all
@@ -35,6 +33,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.create!(params[:movie])
     flash[:notice] = "#{@movie.title} was successfully created."
+    flash.keep
     redirect_to movies_path
   end
 
@@ -46,6 +45,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find params[:id]
     @movie.update_attributes!(params[:movie])
     flash[:notice] = "#{@movie.title} was successfully updated."
+    flash.keep
     redirect_to movie_path(@movie)
   end
 
@@ -53,6 +53,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
     flash[:notice] = "Movie '#{@movie.title}' deleted."
+    flash.keep
     redirect_to movies_path
   end
 

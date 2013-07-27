@@ -1,0 +1,16 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-27 07:49:56 -0700
+Served asset /rails.png - 200 OK (66ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 07:50:10 -0700
+  Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 5ms
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:10:in `index'
+
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.6ms)

@@ -7,19 +7,24 @@ class MoviesController < ApplicationController
   end
 
   def index
+	@all_ratings = Movie.select(:rating).map(&:rating).uniq
 
-	#if params[:ord_title] == "true"
-		#@movies= Movie.order(:title)
-		#@th_title='hilite'
-	#elsif params[:ord_release] == "true"
-		#@movies= Movie.order(:release_date)
-		#@th_release='hilite'
-	#else
+	if params[:ratings]
+		@selected_ratings=params[:ratings].keys
+	else
+		@selected_ratings= @all_ratings
+	end
+
+	#Movie.where(:rating => params[:ratings].keys).order(:title).each do |rat|
+	#Movie.select(:rating).map(&:rating).uniq.each do |rat|
+		#logger.debug(rat)
+	#end	
+		
 	if params[:ord]
-		@movies= Movie.order(params[:ord])
+		@movies= Movie.where(:rating => @selected_ratings).order(params[:ord])
 		@th_class='hilite'
 	else
-    		@movies = Movie.all
+    		@movies = Movie.where(:rating => @selected_ratings).all
 	end
   end
 

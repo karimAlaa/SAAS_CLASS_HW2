@@ -17,7 +17,6 @@ class MoviesController < ApplicationController
 	#else
 	if params[:ord]
 		@movies= Movie.order(params[:ord])
-		@th_class='hilite'
 	else
     		@movies = Movie.all
 	end

@@ -14,3 +14,1744 @@ ActiveRecord::StatementInvalid (Could not find table 'movies'):
 Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
 Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
 Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.6ms)
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (27.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (6.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateMovies (20111119180638)
+  [1m[35m (1.1ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111119180638')[0m
+  [1m[35m (0.9ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("movies")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35mSQL (22.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "G"], ["release_date", 1992-11-25 00:00:00 UTC], ["title", "Aladdin"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "R"], ["release_date", 1984-10-26 00:00:00 UTC], ["title", "The Terminator"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "R"], ["release_date", 1989-07-21 00:00:00 UTC], ["title", "When Harry Met Sally"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "PG-13"], ["release_date", 2011-08-10 00:00:00 UTC], ["title", "The Help"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "PG-13"], ["release_date", 2001-01-05 00:00:00 UTC], ["title", "Chocolat"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "R"], ["release_date", 2001-04-25 00:00:00 UTC], ["title", "Amelie"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "G"], ["release_date", 1968-04-06 00:00:00 UTC], ["title", "2001: A Space Odyssey"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "PG"], ["release_date", 2004-11-05 00:00:00 UTC], ["title", "The Incredibles"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "PG"], ["release_date", 1981-06-12 00:00:00 UTC], ["title", "Raiders of the Lost Ark"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2013-07-27 15:54:28 UTC], ["description", nil], ["rating", "G"], ["release_date", 2000-06-21 00:00:00 UTC], ["title", "Chicken Run"], ["updated_at", 2013-07-27 15:54:28 UTC]]
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-27 08:57:28 -0700
+Served asset /rails.png - 200 OK (19ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-07-27 08:57:31 -0700
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (11.9ms)
+Completed 200 OK in 296ms (Views: 289.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 08:57:44 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (77.9ms)
+Compiled application.css  (1ms)  (pid 4076)
+Compiled application.js  (1ms)  (pid 4076)
+Completed 200 OK in 128ms (Views: 122.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 08:57:44 -0700
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 08:57:44 -0700
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-07-27 08:57:51 -0700
+  Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Rendered movies/show.html.haml within layouts/application (167.0ms)
+Completed 200 OK in 199ms (Views: 185.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 08:57:51 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 08:57:51 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 08:57:55 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (67.3ms)
+Completed 200 OK in 86ms (Views: 79.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 08:57:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 08:57:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:08:48 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"movies", :ord=>true}):
+    4: %table#movies
+    5:   %thead
+    6:     %tr
+    7:       %th= link_to "Movie Title" , movie_path(:ord =>true)
+    8:       %th Rating
+    9:       %th Release Date
+    10:       %th More Info
+  app/views/movies/index.html.haml:7:in `_app_views_movies_index_html_haml__805762750__643150678'
+
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:09:47 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (270.3ms)
+Completed 200 OK in 357ms (Views: 336.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:50 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (56.5ms)
+Completed 200 OK in 96ms (Views: 77.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:50 -0700
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:51 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (57.2ms)
+Completed 200 OK in 77ms (Views: 70.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:53 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (55.8ms)
+Completed 200 OK in 87ms (Views: 74.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:54 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (49.6ms)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:54 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:54 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:55 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (177.2ms)
+Completed 200 OK in 202ms (Views: 196.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:55 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:55 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:56 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (50.0ms)
+Completed 200 OK in 75ms (Views: 69.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:57 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (49.4ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:57 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:57 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:58 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (56.2ms)
+Completed 200 OK in 83ms (Views: 70.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:09:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:09:59 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:09:59 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (54.0ms)
+Completed 200 OK in 72ms (Views: 66.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:10:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:10:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:10:01 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (156.5ms)
+Completed 200 OK in 188ms (Views: 181.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:10:01 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:10:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:10:02 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (56.5ms)
+Completed 200 OK in 75ms (Views: 68.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:10:02 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:10:02 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:10:03 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (59.1ms)
+Completed 200 OK in 77ms (Views: 70.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:10:03 -0700
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:10:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:10:04 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (164.5ms)
+Completed 200 OK in 182ms (Views: 176.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:10:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:10:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=true" for 127.0.0.1 at 2013-07-27 09:12:29 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (164.9ms)
+Completed 200 OK in 186ms (Views: 180.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:31 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (187.6ms)
+Completed 200 OK in 220ms (Views: 214.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:12:33 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (67.6ms)
+Completed 200 OK in 97ms (Views: 90.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:34 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:12:35 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (57.9ms)
+Completed 200 OK in 77ms (Views: 71.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:12:36 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (168.0ms)
+Completed 200 OK in 194ms (Views: 188.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:38 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (108.7ms)
+Completed 200 OK in 134ms (Views: 127.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:38 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:39 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (167.4ms)
+Completed 200 OK in 186ms (Views: 179.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:41 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (54.2ms)
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:42 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (65.2ms)
+Completed 200 OK in 89ms (Views: 82.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:42 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:43 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (173.5ms)
+Completed 200 OK in 191ms (Views: 185.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:43 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:12:44 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (5.8ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (66.9ms)
+Completed 200 OK in 104ms (Views: 92.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:12:44 -0700
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:12:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:18:16 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (174.1ms)
+Completed 200 OK in 208ms (Views: 200.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:18:19 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (170.9ms)
+Completed 200 OK in 219ms (Views: 197.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:19 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:19 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:18:21 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (103.1ms)
+Completed 200 OK in 157ms (Views: 135.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:18:23 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (104.8ms)
+Completed 200 OK in 380ms (Views: 362.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:24 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:18:25 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (63.7ms)
+Completed 200 OK in 99ms (Views: 85.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:25 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:18:27 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (367.7ms)
+Completed 200 OK in 420ms (Views: 410.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:18:44 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (187.4ms)
+Completed 200 OK in 286ms (Views: 243.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:18:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:18:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:20:00 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (61.1ms)
+Completed 200 OK in 88ms (Views: 81.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:20:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:20:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:20:01 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (189.5ms)
+Completed 200 OK in 245ms (Views: 227.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:20:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:20:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:20:27 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+titling.....
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (66.5ms)
+Completed 200 OK in 88ms (Views: 82.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:20:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:20:27 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:20:28 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+titling.....
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (310.7ms)
+Completed 200 OK in 368ms (Views: 351.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:20:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:20:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:20:38 -0700
+  Processing by MoviesController#index as HTML
+titling.....
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (60.1ms)
+Completed 200 OK in 90ms (Views: 79.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:20:38 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:20:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:21:33 -0700
+  Processing by MoviesController#index as HTML
+titling.....
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (70.2ms)
+Completed 200 OK in 121ms (Views: 92.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:21:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:21:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:22:05 -0700
+  Processing by MoviesController#index as HTML
+titling.....
+  [1m[35mMovie Load (1.0ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (56.5ms)
+Completed 200 OK in 85ms (Views: 76.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:22:29 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (58.1ms)
+Completed 200 OK in 79ms (Views: 72.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:22:32 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (2.0ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (155.1ms)
+Completed 200 OK in 185ms (Views: 173.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:22:34 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (62.2ms)
+Completed 200 OK in 94ms (Views: 81.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:22:37 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (81.3ms)
+Completed 200 OK in 118ms (Views: 111.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:38 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:22:42 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (99.1ms)
+Completed 200 OK in 141ms (Views: 134.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:42 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:42 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:22:44 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (52.4ms)
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:22:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:22:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:23:00 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (215.6ms)
+Completed 200 OK in 275ms (Views: 257.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:23:11 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (62.5ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:11 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:23:13 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (185.7ms)
+Completed 200 OK in 238ms (Views: 221.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:23:26 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (58.9ms)
+Completed 200 OK in 77ms (Views: 70.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:23:29 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (73.1ms)
+Completed 200 OK in 114ms (Views: 105.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:23:35 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (162.0ms)
+Completed 200 OK in 200ms (Views: 183.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:35 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:23:37 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (173.3ms)
+Completed 200 OK in 247ms (Views: 223.2ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:23:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:23:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:24:26 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (62.8ms)
+Completed 200 OK in 94ms (Views: 78.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:24:26 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:24:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:24:29 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (79.3ms)
+Completed 200 OK in 110ms (Views: 97.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:24:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:24:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:24:35 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (58.0ms)
+Completed 200 OK in 87ms (Views: 81.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:24:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:24:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:24:37 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (458.1ms)
+Completed 200 OK in 518ms (Views: 491.7ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:24:38 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:24:38 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:24:59 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies" ORDER BY release_date
+Rendered movies/index.html.haml within layouts/application (69.5ms)
+Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:24:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:24:59 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:25:03 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+titling.....
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY title DESC[0m
+Rendered movies/index.html.haml within layouts/application (72.0ms)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:25:05 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+titling.....
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title DESC
+Rendered movies/index.html.haml within layouts/application (69.9ms)
+Completed 200 OK in 90ms (Views: 83.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:05 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:25:08 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (76.8ms)
+Completed 200 OK in 97ms (Views: 90.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:09 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:25:11 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY release_date
+Rendered movies/index.html.haml within layouts/application (176.5ms)
+Completed 200 OK in 191ms (Views: 188.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:11 -0700
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:25:40 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (76.0ms)
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:40 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:40 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:25:42 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY release_date
+Rendered movies/index.html.haml within layouts/application (105.3ms)
+Completed 200 OK in 135ms (Views: 113.3ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:43 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:25:49 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (83.0ms)
+Completed 200 OK in 120ms (Views: 104.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:49 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:25:51 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (111.3ms)
+Completed 200 OK in 156ms (Views: 141.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:25:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:25:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:26:04 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (181.2ms)
+Completed 200 OK in 196ms (Views: 193.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:26:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:26:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:26:07 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (64.4ms)
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:26:08 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:26:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:26:09 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (172.3ms)
+Completed 200 OK in 211ms (Views: 191.2ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:26:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:26:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:26:14 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (82.7ms)
+Completed 200 OK in 105ms (Views: 100.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:26:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:26:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:26:16 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (153.3ms)
+Completed 200 OK in 214ms (Views: 200.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:26:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:26:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:39:16 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (223.4ms)
+Compiled application.css  (2ms)  (pid 4076)
+Completed 200 OK in 272ms (Views: 263.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:39:17 -0700
+Served asset /application.css - 200 OK (18ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:39:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:39:20 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+Rendered movies/index.html.haml within layouts/application (65.8ms)
+Completed 200 OK in 122ms (Views: 91.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:39:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:39:21 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:39:23 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (195.5ms)
+Completed 200 OK in 219ms (Views: 215.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:39:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:39:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:39:26 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (65.2ms)
+Completed 200 OK in 79ms (Views: 69.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:39:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:39:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:39:28 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" ORDER BY release_date
+Rendered movies/index.html.haml within layouts/application (63.0ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:39:29 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:39:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:41:08 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (1.5ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (79.4ms)
+Completed 200 OK in 100ms (Views: 94.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:41:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:41:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:41:11 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (63.1ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:41:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:41:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:41:12 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (173.8ms)
+Completed 200 OK in 188ms (Views: 184.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:41:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:41:13 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/movies?ord_title=true" for 127.0.0.1 at 2013-07-27 09:41:14 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_title"=>"true"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (74.5ms)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:41:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:41:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord_release=true" for 127.0.0.1 at 2013-07-27 09:41:15 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord_release"=>"true"}
+  [1m[36mMovie Load (2.0ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (63.8ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:41:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:41:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 09:44:44 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" 
+Rendered movies/index.html.haml within layouts/application (79.9ms)
+Completed 200 OK in 105ms (Views: 97.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:44:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:44:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=title" for 127.0.0.1 at 2013-07-27 09:44:47 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"title"}
+  [1m[36mMovie Load (1.9ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY title[0m
+Rendered movies/index.html.haml within layouts/application (76.6ms)
+Completed 200 OK in 106ms (Views: 101.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:44:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:44:48 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=release_date" for 127.0.0.1 at 2013-07-27 09:44:50 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"release_date"}
+  [1m[35mMovie Load (1.0ms)[0m  SELECT "movies".* FROM "movies" ORDER BY release_date
+Rendered movies/index.html.haml within layouts/application (186.8ms)
+Completed 200 OK in 211ms (Views: 206.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:44:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:44:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=title" for 127.0.0.1 at 2013-07-27 09:44:52 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"title"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY title[0m
+Rendered movies/index.html.haml within layouts/application (79.0ms)
+Completed 200 OK in 94ms (Views: 90.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:44:52 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:44:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=release_date" for 127.0.0.1 at 2013-07-27 09:44:53 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"release_date"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" ORDER BY release_date
+Rendered movies/index.html.haml within layouts/application (185.1ms)
+Completed 200 OK in 205ms (Views: 202.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:44:54 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:44:54 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=release_date" for 127.0.0.1 at 2013-07-27 09:48:58 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"release_date"}
+ERROR: compiling _app_views_movies_index_html_haml__805762750_84065050 RAISED /home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:10: unknown regexp options - thad
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:10: syntax error, unexpected $undefined
+...fo</th>\n    </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                               ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:10: syntax error, unexpected $undefined
+...  </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                               ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:13: syntax error, unexpected $undefined
+_hamlout.push_text("    <tr>\n      <td>#{_hamlout.adjust_tabs(2); 
+                             ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:15: syntax error, unexpected '}', expecting tSTRING_DEND
+));}</td>\n      <td>#{_hamlout.a...
+    ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:16: unknown regexp options - td
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:16: syntax error, unexpected $undefined
+));}</td>\n      <td>#{_hamlout.adjust_...
+          ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:17: syntax error, unexpected ')'
+));}</td>\n      <td>#{_hamlou...
+ ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:18: unknown regexp options - td
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected $undefined
+));}</td>\n    </tr>\n", -1, false);end
+          ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: unknown regexp options - tbdy
+unmatched close parenthesis: /tr>\n", -1, false);end
+_hamlout.push_text("  </
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: syntax error, unexpected $undefined
+..._hamlout.push_text("  </tbody>\n</table>\n#{_hamlout.adjust_...
+...                               ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: unterminated regexp meets end of file
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Function body:           def _app_views_movies_index_html_haml__805762750_84065050(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "movies/index";_old_output_buffer = @output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<h1>All Movies</h1>\n<table id='movies'>\n  <thead>\n    <tr>\n      <th#{_hamlout.adjust_tabs(3); 
+
+
+
+
+
+_hamlout.attributes({}, nil, class:@th_class if params[:ord]== 'title')}>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((link_to "Movie Title" , movies_path(:ord => 'title')
+));}</th>\n      <th>Rating</th>\n      <th#{
+_hamlout.attributes({}, nil, class:@th_class if params[:ord]== 'release_date')}>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((link_to "Release Date", movies_path(:ord => 'release_date')
+));}</th>\n      <th>More Info</th>\n    </tr>\n  </thead>\n  <tbody>\n", -1, false);
+
+ @movies.each do |movie|
+_hamlout.push_text("    <tr>\n      <td>#{_hamlout.adjust_tabs(2); 
+_hamlout.format_script_false_true_false_true_false_true_false((movie.title
+));}</td>\n      <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((movie.rating
+));}</td>\n      <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((movie.release_date
+));}</td>\n      <td>#{_hamlout.adjust_tabs(1); _hamlout.format_script_false_true_false_true_false_true_false((link_to "More about #{movie.title}", movie_path(movie)
+));}</td>\n    </tr>\n", -1, false);end
+_hamlout.push_text("  </tbody>\n</table>\n#{_hamlout.adjust_tabs(-2); _hamlout.format_script_false_false_false_true_false_true_false(( link_to 'Add new movie', new_movie_path
+));}\n", 0, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/karimalaa/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__504397868__process_action__693620209__callbacks'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/karimalaa/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/karimalaa/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/karimalaa/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+Rendered movies/index.html.haml within layouts/application (55.7ms)
+Completed 500 Internal Server Error in 81ms
+
+ActionView::Template::Error (/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:10: unknown regexp options - thad
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:10: syntax error, unexpected $undefined
+...fo</th>\n    </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                               ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:10: syntax error, unexpected $undefined
+...  </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                               ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:13: syntax error, unexpected $undefined
+_hamlout.push_text("    <tr>\n      <td>#{_hamlout.adjust_tabs(2); 
+                             ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:15: syntax error, unexpected '}', expecting tSTRING_DEND
+));}</td>\n      <td>#{_hamlout.a...
+    ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:16: unknown regexp options - td
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:16: syntax error, unexpected $undefined
+));}</td>\n      <td>#{_hamlout.adjust_...
+          ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:17: syntax error, unexpected ')'
+));}</td>\n      <td>#{_hamlou...
+ ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:18: unknown regexp options - td
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected $undefined
+));}</td>\n    </tr>\n", -1, false);end
+          ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: unknown regexp options - tbdy
+unmatched close parenthesis: /tr>\n", -1, false);end
+_hamlout.push_text("  </
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: syntax error, unexpected $undefined
+..._hamlout.push_text("  </tbody>\n</table>\n#{_hamlout.adjust_...
+...                               ^
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: unterminated regexp meets end of file
+/home/karimalaa/Documents/hw2_rottenpotatoes/app/views/movies/index.html.haml:19: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+    7:       %th{class:@th_class if params[:ord]== 'title'}= link_to "Movie Title" , movies_path(:ord => 'title')
+    8:       %th Rating
+    9:       %th{class:@th_class if params[:ord]== 'release_date'}= link_to "Release Date", movies_path(:ord => 'release_date')
+    10:       %th More Info
+    11:   %tbody
+    12:     - @movies.each do |movie|
+    13:       %tr
+  
+
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /home/karimalaa/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.5ms)
+
+
+Started GET "/movies?ord=release_date" for 127.0.0.1 at 2013-07-27 09:50:22 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"release_date"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (81.5ms)
+Completed 200 OK in 97ms (Views: 93.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:50:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:50:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=title" for 127.0.0.1 at 2013-07-27 09:50:25 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"title"}
+  [1m[35mMovie Load (2.8ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (209.9ms)
+Completed 200 OK in 235ms (Views: 227.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:50:26 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:50:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=release_date" for 127.0.0.1 at 2013-07-27 09:50:28 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"release_date"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (62.8ms)
+Completed 200 OK in 82ms (Views: 79.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:50:28 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:50:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=title" for 127.0.0.1 at 2013-07-27 09:50:29 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"title"}
+  [1m[35mMovie Load (5.7ms)[0m  SELECT "movies".* FROM "movies" ORDER BY title
+Rendered movies/index.html.haml within layouts/application (188.0ms)
+Completed 200 OK in 210ms (Views: 200.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:50:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:50:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?ord=release_date" for 127.0.0.1 at 2013-07-27 09:50:31 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ord"=>"release_date"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" ORDER BY release_date[0m
+Rendered movies/index.html.haml within layouts/application (73.9ms)
+Completed 200 OK in 96ms (Views: 91.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 09:50:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 09:50:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)

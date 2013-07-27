@@ -1,4 +1,18 @@
-html, body {
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1374943157.0134237:@value{I"
+class:ETI"BundledAsset;
+FI"id;
+TI"%af55e2e09d59904e06c4dba9068b5a6c;
+FI"logical_path;
+TI"application.css;
+TI"pathname;
+TI"1$root/app/assets/stylesheets/application.css;
+FI"content_type;
+TI"text/css;
+TI"
+mtime;
+TI"2013-07-27T09:31:09-07:00;
+TI"	body;
+TI"Whtml, body {
   margin: 0;
   padding: 0;
   background: White;
@@ -62,3 +76,18 @@ form label {
   font-weight: bold;
   color: maroon;
 }
+;
+TI"asset_paths;
+T[I"1$root/app/assets/stylesheets/application.css;
+FI"dependency_paths;
+T[{I"	path;
+TI"1$root/app/assets/stylesheets/application.css;
+FI"
+mtime;
+TIu:	Timep[ÄˆBõ|
+:nano_numi™:nano_deni:submicro"ìÄ:offseti˛êù:	zoneI"PDT;
+TI"hexdigest;
+TI"%ccece0596b8ee21dfdbf64d9f41e81e2;
+FI"_version;
+TI"%46dde6621c301f4928e3b34efee9e3b5;
+F

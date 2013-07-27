@@ -8,16 +8,16 @@ class MoviesController < ApplicationController
 
   def index
 	@all_ratings = Movie.select(:rating).map(&:rating).uniq
-
+	
 	session[:ratings]=params[:ratings] if params[:ratings]
 	session[:order]=params[:ord] if params[:ord]
 	redir_req=true unless params[:ord]||params[:ratings]
 	
-	if redir_req
+	if redir_req && session[:ratings]
 		params[:ord]=session[:order]
 		params[:ratings]=session[:ratings]
     		flash.keep
-    		redirect_to movies_path(params.slice(:ord,:ratings))
+    		redirect_to movies_path(params.slice(:ord,:ratings))		
 	end
 
 	if session[:ratings]

@@ -9536,3 +9536,118 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:37:45 -0700
 Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 15:49:00 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT rating FROM "movies" [0m
+  [1m[35mMovie Load (1.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')
+Rendered movies/index.html.haml within layouts/application (67.5ms)
+Completed 200 OK in 205ms (Views: 150.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:49:02 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 15:49:02 -0700
+Served asset /application.js - 200 OK (20ms)
+
+
+Started GET "/movies/12" for 127.0.0.1 at 2013-07-27 15:49:10 -0700
+  Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "12"]]
+Rendered movies/show.html.haml within layouts/application (48.6ms)
+Completed 200 OK in 87ms (Views: 79.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 15:49:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:49:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started DELETE "/movies/12" for 127.0.0.1 at 2013-07-27 15:49:15 -0700
+  Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9dv0SNZjZY3kIECJ3NWYcnTt56torDuBpX2CyraGc3Y=", "id"=>"12"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mSQL (12.5ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 12]]
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 79ms
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 15:49:15 -0700
+  Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT rating FROM "movies" 
+  [1m[36mMovie Load (4.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')[0m
+Rendered movies/index.html.haml within layouts/application (39.5ms)
+Completed 200 OK in 110ms (Views: 59.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 15:49:15 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:49:15 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=true&ratings%5BR%5D=true&ratings%5BPG-13%5D=true&ratings%5BPG%5D=true&commit=Refresh" for 127.0.0.1 at 2013-07-27 15:53:00 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"true", "R"=>"true", "PG-13"=>"true", "PG"=>"true"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT rating FROM "movies" 
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')[0m
+Rendered movies/index.html.haml within layouts/application (193.7ms)
+Completed 200 OK in 274ms (Views: 216.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:53:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 15:53:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2013-07-27 15:53:11 -0700
+  Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (3.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+Rendered movies/show.html.haml within layouts/application (33.3ms)
+Completed 200 OK in 68ms (Views: 56.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 15:53:12 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:53:12 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-07-27 15:53:18 -0700
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT rating FROM "movies" [0m
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=true
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')
+Completed 302 Found in 50ms
+
+
+Started GET "/movies?ratings%5BG%5D=true&ratings%5BPG%5D=true&ratings%5BPG-13%5D=true&ratings%5BR%5D=true" for 127.0.0.1 at 2013-07-27 15:53:18 -0700
+  Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"true", "PG"=>"true", "PG-13"=>"true", "R"=>"true"}}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT rating FROM "movies" [0m
+  [1m[35mMovie Load (3.6ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+Rendered movies/index.html.haml within layouts/application (51.4ms)
+Completed 200 OK in 119ms (Views: 70.5ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-27 15:53:18 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-27 15:53:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
